@@ -8,6 +8,10 @@ class Word
     @id = @@words.length + 1
   end
 
+  define_method(:add_definition) do |definition|
+    @definition.push(definition)
+  end
+
   define_singleton_method(:add) do |word|
     @@words.push(word)
   end
