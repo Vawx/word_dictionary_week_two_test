@@ -12,6 +12,10 @@ run `ruby app.rb`
 
 browser url `localhost:4567`
 
+## View
+
+View on Heroku [Here](https://blooming-plateau-8520.herokuapp.com/)
+
 ## License
 Copyright (c) <2016> Kyle Langley - Epicodus
 
