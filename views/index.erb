@@ -6,9 +6,11 @@
       <div class="well">
         <div class="wrapper" style="text-align:center;">
           <p class="word"> <a class="hidden-a" href="/word/<%= word.id %>"><%= word.word %></a> </p>
-          <% word.definition.each do |definition| %>
-            <div class="definition"><%= definition.definition %><div/>
-          <%end%>
+          <ol>
+            <% word.definition.each do |definition| %>
+              <li class="definition"><div class="" style="padding-right:32px;"><%= definition.definition %></div></li>
+            <%end%>
+        </ol>
        </div>
       </div>
     </form>

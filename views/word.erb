@@ -3,9 +3,11 @@
     <div class="well">
       <div class="wrapper" style="text-align:center">
         <p class="word"><%= @word.word %></p>
-        <% @word.definition.each do |definition| %>
-          <%= definition.definition %>
-        <%end%>
+        <ol>
+          <% @word.definition.each do |definition| %>
+            <li class="definition"><div class="" style="padding-right:32px;"><%= definition.definition %></div></li>
+          <%end%>
+        </ol>
         <div class="" style="padding-top:12px;">
           <form class="" action="/add_definition/<%=@word.id%>" method="post">
             <input type="text" name="new_definition_input" value="">
