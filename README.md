@@ -1,9 +1,12 @@
 # Word / Dictionary
 
+## Author
+Kyle Langley
+
 ## Description
 Allows users to create and add words with definitions. Users can also add more definitions to existing words.
 
-## Download
+## Setup Instructions
 clone `https://github.com/Vawx/word_dictionary_week_two_test`
 
 run `bundle install`
