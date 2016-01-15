@@ -31,7 +31,7 @@ end
 post '/add_definition/:id' do
   found_word_by_id = Word.get_word_by_id(params[:id])
   if found_word_by_id
-    new_definition = params.fetch("new_definition_input")
+    new_definition = params.fetch("new_definition_input_on_existing_word")
     if new_definition.length > 0 && !Word.already_included_definition( found_word_by_id, new_definition )
       found_word_by_id.add_definition( Definition.new(new_definition) )
     end
