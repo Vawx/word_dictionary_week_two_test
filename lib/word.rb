@@ -15,4 +15,13 @@ class Word
   define_singleton_method(:words) do
     return @@words
   end
+
+  define_singleton_method(:get_word_by_id) do |id|
+    @@words.each do |word|
+      if word.id == id.to_i
+        return word
+      end
+    end
+    return nil
+  end
 end

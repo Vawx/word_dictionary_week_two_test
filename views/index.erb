@@ -1,24 +1,3 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1>Word / Definition</h1>
-    <p>Store your words and definitions.</p>
-    <form class="" action="/add_word" method="post">
-      <div class="wrapper" style="text-align:right;">
-        <div class="container">
-          <label for="" style="padding-right:12px;">New Word:</label>
-          <input type="text" name="new_word_input" value="">
-        </div>
-        <div class="container">
-          <label for="" style="padding-right:12px;">Definition:</label>
-          <input type="text" name="new_definition_input" value="">
-        </div>
-        <div class="container">
-          <button class="btn btn-primary" type="submit" name="button">Add</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
 
 <div class="container">
   <div class="col-lg-6 col-lg-offset-3">
@@ -26,9 +5,9 @@
     <form class="" action="/word/<%= word.id %>">
       <div class="well">
         <div class="wrapper" style="text-align:center;">
-          <p class="word"> <%= word.word %> </p>
+          <p class="word"> <a class="hidden-a" href="/word/<%= word.id %>"><%= word.word %></a> </p>
           <% word.definition.each do |definition| %>
-            <%= definition.definition %>
+            <div class="definition"><%= definition.definition %><div/>
           <%end%>
           <div class="" style="padding-top:12px;">
             <button class="btn btn-primary" type="submit" name="button">Add Definition</button>

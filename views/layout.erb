@@ -9,8 +9,29 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1><a class="hidden-a" href="/">Word / Definition</a></h1>
+        <p>Store your words and definitions.</p>
+        <form class="" action="/add_word" method="post">
+          <div class="wrapper" style="text-align:right;">
+            <div class="container">
+              <label for="" style="padding-right:12px;">New Word:</label>
+              <input type="text" name="new_word_input" value="">
+            </div>
+            <div class="container">
+              <label for="" style="padding-right:12px;">Definition:</label>
+              <input type="text" name="new_definition_input" value="">
+            </div>
+            <div class="container">
+              <button class="btn btn-primary" type="submit" name="button">Add</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <%=yield%>
   </body>
-  <%= yield %>
   <div class="row">
     <footer>
       <div class="wrapper" style="text-align:center;">
