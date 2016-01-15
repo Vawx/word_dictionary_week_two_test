@@ -12,9 +12,36 @@ class Word
     @definition.push(definition)
   end
 
-  define_singleton_method(:add) do |word|
-    @@words.push(word)
-    @@words.sort_by!{ |w| w.word.downcase }
+  define_singleton_method(:add) do |new_word|
+    found_id = Word.already_included_word(new_word)
+    if found_id != -1
+      matching_existing_word = Word.get_word_by_id(found_id)
+      new_defintion = new_word.definition[ 0 ].definition
+      if !already_included_definition(matching_existing_word, new_defintion)
+        matching_existing_word.add_definition( Definition.new( new_defintion ) )
+      end
+    else
+      @@words.push(new_word)
+      @@words.sort_by!{ |w| w.word.downcase }
+    end
+  end
+
+  define_singleton_method(:already_included_definition) do |new_word, new_defintion|
+    new_word.definition.each do |definition|
+      if definition.definition == new_defintion
+        return true
+      end
+    end
+    return false
+  end
+
+  define_singleton_method(:already_included_word) do |new_word|
+    @@words.each do |word|
+      if word.word == new_word.word
+        return word.id
+      end
+    end
+    return -1
   end
 
   define_singleton_method(:words) do
