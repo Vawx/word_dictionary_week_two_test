@@ -5,8 +5,11 @@ Allows users to create and add words with definitions. Users can also add more d
 
 ## Download
 clone `https://github.com/Vawx/word_dictionary_week_two_test`
+
 run `bundle install`
+
 run `ruby app.rb`
+
 browser url `localhost:4567`
 
 ## License
