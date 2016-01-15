@@ -1,7 +1,7 @@
 class Word
-  attr_reader(:definitions, :name)
+  attr_reader(:definition, :word)
   define_method(:initialize) do |attributes|
-    @definitions.push(attributes.fetch("definition"))
-    @name = attributes.fetch("name")
+    @definition = [attributes.fetch("definition")]
+    @word = attributes.fetch("word")
   end
 end
