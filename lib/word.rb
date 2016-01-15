@@ -14,6 +14,7 @@ class Word
 
   define_singleton_method(:add) do |word|
     @@words.push(word)
+    @@words.sort_by!{ |w| w.word.downcase }
   end
 
   define_singleton_method(:words) do

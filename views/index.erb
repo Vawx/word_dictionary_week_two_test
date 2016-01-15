@@ -5,7 +5,7 @@
     <form class="" action="/word/<%= word.id %>">
       <div class="well">
         <div class="wrapper" style="text-align:center;">
-          <p class="word"> <a class="hidden-a" href="/word/<%= word.id %>"><%= word.word %></a> </p>
+          <a class="hidden-a" href="/word/<%= word.id %>"><p class="word"><%= word.word %></p></a>
           <ol>
             <% word.definition.each do |definition| %>
               <li class="definition"><div class="" style="padding-right:32px;"><%= definition.definition %></div></li>
